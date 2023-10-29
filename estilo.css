@@ -1,3 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+
+/* ESTILOS GENERALES DEL SITIO */
+
 *{
     margin:0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.material-symbols-outlined{
+    color: white;
+}
+
+.container{
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+/* textos */
+
+h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    padding: 1em 0 0.6em 0;
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+.nota{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* botones */
+
+.bt-primary{
+    border: white solid 1px;
+    border-radius: 0.4em;
+    padding: 0.5em 1em;
+    margin-bottom: 4em;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.bt-primary a{
+    color: white;
+    text-decoration: none;
+}
+
+.bt-primary:hover{
+    background-color: rgba(255, 255, 255, 0.151);
+    cursor: pointer;
+}
+
+/* VARIABLES */
+
+:root{
+    --gray: #252525;
+    --orange: #E96A4E;
+    --yellow: #F7D47F;
+    --pink: #FA85A1;
+    --blue: #4F80F5;
+    --purple: #735CE0;
+    --red: #E42E46;
+}
+
+:root{
+    --gradient: linear-gradient( 
+        15deg,
+        var(--orange), 
+        var(--pink), 
+        var(--orange),
+        var(--red));
+}
+
+/* HOME - header */
+
+header{
+    background-color: var(--gray);
+}
+
+header img{
+    height: 40px;
+    margin: 10px 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+nav div{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+#icon-menu{
+    display: none;
+}
+
+#s-hero{
+    height: 90vh;
+    background-image: var(--gradient);
+    background-size: 300%;
+    animation: hero-animation 800s infinite alternate;
+}
+
+/* HOME - MAIN - NOTICIAS */
+
+#s-news{
+    background-color: var(--gray);
+}
+
+#grid-home-news{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    margin-bottom: 4em;
+}
+
+#s-news article:first-of-type{
+    grid-column: span 2;
+}
+
+#s-news article{
+    color: white;
+}
+
+#s-news article img{
+    width: 100%;
+    border-radius: 0.4em;
+    height: 18em;
+    object-fit: cover;
+}
+
+h4{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.6em 0 0.4em 0;
+}
+
+/* HOME - MAIN - SHOWS */
+
+#s-shows{
+    background-image: linear-gradient(var(--yellow), var(--orange));
+    background-size: 160%;
+}
+
+table{
+    border-collapse: collapse;
+    margin-bottom: 4em;
+}
+
+#s-shows tr{
+    height: 3em;
+    border-bottom: var(--gray) solid 1px;
+}
+
+#s-shows th{
+    text-align: start;
+}
+
+td{
+    font-weight: 600;
+    color: var(--gray);
+    text-align: start;
+}
+
+.bt-tabla{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--gray);
+    text-transform: uppercase;
+    padding-right: 0.4em;
+}
+
+.bt-tabla .material-symbols-outlined{
+    color: var(--gray);
+    margin-left: 0.4em;
+}
+
+.bt-tabla:hover{
+    color: #25252597;
+}
+
+
+
+/* RESPONSIVE */
+
+@media all and (max-width: 768px){
+
+    /* estilos grales */
+    h2{font-size: 1.8em;}
+
+    /* header */
+    header img{height: 20px;}
+    nav div{display: none;}
+    #icon-menu{display: block;}
+
+    /* section news */
+    #grid-home-news{grid-template-columns: 1fr;} 
+    #s-news article:first-of-type{grid-column: span 1;}
+    #s-news article img{height: 12em;}
+
+    /* section shows */
+    .bt-tabla p{
+        display: none;
+    }
+}
+
+
+
+/* ANIMACIONES */
+
+@keyframes hero-animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
 }

@@ -1,24 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Kuelgue - Proyecto Web</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="index.html"><img src="" alt="logo"></a>
+            <a href="index.html"><img src="img/logo-ek.png" alt="logo"></a>
             <div>
                 <a href="">noticias</a>
                 <a href="">shows</a>
                 <a href="">bio</a>
                 <a href="">discografía</a>
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
             </div>
+            <span id="icon-menu" class="material-symbols-outlined">menu</span>
         </nav>
     </header>
-    <h1>Hello world!</h1>
-    <h2>prueba cambio</h2>
+    <section id="s-hero">
+
+    </section>
+
+    <main>
+        <section id="s-news">
+            <div class="container flex-col">
+                <h2>Noticias</h2>
+                <div id="grid-home-news">
+                    <article>
+                        <img src="img/img-noticias/noticia1-portada.jpeg" alt="el kuelgue noticia">
+                        <h4>"Nuestro mundo está creado a través del humor, es nuestra forma de vivir, de denunciar y de
+                            liberarse"</h4>
+                        <p class="nota">10 de mayo, 2023</p>
+                    </article>
+                    <article>
+                        <img src="img/img-noticias/noticia2-portada.jpg" alt="el kuelgue noticia">
+                        <h4>"El Kuelgue llegó al Luna Park para celebrar casi 20 años de música"</h4>
+                        <p class="nota">18 de septiembre, 2023</p>
+                    </article>
+                    <article>
+                        <img src="img/img-noticias/noticia3-portada.jpg" alt="el kuelgue noticia">
+                        <h4>"El Kuelgue puso a volar a la Nave Cultural"</h4>
+                        <p class="nota">1 de octubre, 2023</p>
+                    </article>
+                </div>
+                <div class="bt-primary">
+                    <a href="">Ver todas las noticias</a><span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </div>
+
+            </div>
+        </section>
+        <section id="s-shows">
+            <div class="container flex-col">
+                <h2>Próximos shows</h2>
+                <table>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Lugar</th>
+                        <th>Tickets</th>
+                        <th>Kuartito</th>
+                    </tr>
+                    <tr>
+                        <td>Sábado 07, OCTUBRE</td>
+                        <td>GAP - MAR DEL PLATA</td>
+                        <td>
+                            <a class="bt-tabla" href="">
+                                <p>comprar</p>
+                                <span class="material-symbols-outlined">
+                                    local_activity
+                                </span>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="bt-tabla" href="">
+                                <p>ingresar</p>
+                                <span class="material-symbols-outlined">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Domingo 08, OCTUBRE</td>
+                        <td>FESTIVAL HARLEM - SANTA FE</td>
+                        <td>
+                            <a class="bt-tabla" href="">
+                                <p>comprar</p>
+                                <span class="material-symbols-outlined">
+                                    local_activity
+                                </span>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="bt-tabla" href="">
+                                <p>ingresar</p>
+                                <span class="material-symbols-outlined">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sábado 28, OCTUBRE</td>
+                        <td>MOOD LIVE - NEUQUÉN</td>
+                        <td>
+                            <a class="bt-tabla" href="">
+                                <p>comprar</p>
+                                <span class="material-symbols-outlined">
+                                    local_activity
+                                </span>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="bt-tabla" href="">
+                                <p>ingresar</p>
+                                <span class="material-symbols-outlined">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="bt-primary">
+                    <a href="">Ver todas las fechas</a><span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </body>
+
 </html>
