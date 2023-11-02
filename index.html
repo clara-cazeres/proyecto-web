@@ -15,10 +15,10 @@
         <nav>
             <a href="index.html"><img src="img/logo-ek.png" alt="logo"></a>
             <div>
-                <a href="">noticias</a>
-                <a href="">shows</a>
-                <a href="">bio</a>
-                <a href="">discografía</a>
+                <a href="noticias.html">noticias</a>
+                <a href="shows.html">shows</a>
+                <a href="biografia.html">bio</a>
+                <a href="discografia.htmlß">discografía</a>
                 <span class="material-symbols-outlined">
                     account_circle
                 </span>
@@ -34,7 +34,7 @@
         <section id="s-news">
             <div class="container flex-col">
                 <h2>Noticias</h2>
-                <div id="grid-home-news">
+                <div class="grid-news">
                     <article>
                         <img src="img/img-noticias/noticia1-portada.jpeg" alt="el kuelgue noticia">
                         <h4>"Nuestro mundo está creado a través del humor, es nuestra forma de vivir, de denunciar y de
@@ -53,7 +53,7 @@
                     </article>
                 </div>
                 <div class="bt-primary">
-                    <a href="">Ver todas las noticias</a><span class="material-symbols-outlined">
+                    <a href="noticias.html">Ver todas las noticias</a><span class="material-symbols-outlined">
                         arrow_forward
                     </span>
                 </div>
@@ -138,8 +138,84 @@
                 </div>
             </div>
         </section>
+        <section id="s-dis">
+            <div class="container flex-col">
+                <h2>Últimos lanzamientos</h2>
+                <div class="grid-disc">
+                    <div>
+                        <img src="img/portadas/portada-holaprecioso.png" alt="Portada Hola Precioso">
+                        <h5>Hola Precioso</h5>
+                        <p class="fecha-disco">Álbum - 2023</p>
+                    </div>
+                    <div>
+                        <img src="img/portadas/portada-diganselo.png" alt="Portada Díganselo">
+                        <h5>Díganselo</h5>
+                        <p class="fecha-disco">Single - 2023</p>
+                    </div>
+                    <div>
+                        <img src="img/portadas/portada-sinoca.png" alt="Portada Sinoca">
+                        <h5>Sinoca</h5>
+                        <p class="fecha-disco">Single - 2023</p>
+                    </div>
+                    <div>
+                        <img src="img/portadas/portada-jose.png" alt="Portada Jose">
+                        <h5>José</h5>
+                        <p class="fecha-disco">Single - 2023</p>
+                    </div>
+                </div>
 
+                <div class="bt-primary">
+                    <a href="shows.html">Ver todas las fechas</a><span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="s-form">
+
+            <div class="container flex-col">
+                <p>¡Mantente al tanto de nuestras novedades!</p>
+                <h2>Suscribite a nuestro newsletter</h2>
+                <div class="flex-row container-form">
+                    <form action="" id="form-newsletter" class="flex-col">
+                        <label for="input-name">
+                            <input type="text" name="name" id="input-name" placeholder="Nombre">
+                        </label>
+                        
+                        <label for="input-mail">
+                            <input type="text" name="mail" id="input-mail" placeholder="Mail">
+                        </label>
+                        <div>
+                            <input type="checkbox" id="input-checkbox">
+                            <label for="input-checkbox">Acepto los términos y condiciones</label>
+                        </div>
+
+                        <button class="bt-primary" type="submit">
+                            Enviar
+                        </button>
+                    </form>
+                    <div>
+                        <img src="img/ilustraciones/icon_ruli.svg" alt="">
+                    </div>
+
+                </div>
+
+
+            </div>
+            
+        </section>
     </main>
+    <footer>
+        <div>
+            <a href="https://www.instagram.com/elkuelgue/"><img src="img/icons/icons_ig.svg" alt=""></a>
+            <a href="https://www.facebook.com/ElKuelgue/?fref=ts"><img src="img/icons/icons_fb.svg" alt=""></a>
+            <a href="https://open.spotify.com/artist/6jRUKVZllu1wtgXHbqvUmT?si=kLiB7PShQDC0x8Jr-sXi2A"><img src="img/icons/icons_spotify.svg" alt=""></a>
+            <a href="https://www.youtube.com/@ElKuelgue"><img src="img/icons/icons_yt.svg" alt=""></a>
+        </div>
+
+        <p>© 2023 Clara Cazéres | Proyecto Web, Diseño Digital | ORT Uruguay</p>
+    </footer>
 </body>
 
 </html>
