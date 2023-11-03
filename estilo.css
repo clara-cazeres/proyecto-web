@@ -376,6 +376,10 @@ footer p {
     width: 15%;
 }
 
+#fondo-bio{
+    background-image: url(img/bio/fondo.png);
+}
+
 /* RESPONSIVE */
 
 @media all and (max-width: 768px) {
