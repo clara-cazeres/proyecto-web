@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias</title>
+    <title>Shows</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="estilo.css">
@@ -28,13 +28,22 @@
     </header>
 
     <main>
-        <table id="tabla-shows">
+        <section id="shows">
+            <div class="container flex-col">
+                <h2>Shows</h2>
+                <div id="filtro-shows">
+                    <input type="radio" name="fecha-shows" id="fechas-pasadas">
+                    <label for="fechas-pasadas">Fechas pasadas</label>
+                    <input type="radio" name="fecha-shows" id="fechas-proximas">
+                    <label for="fechas-proximas">Fechas proximas</label>
+                </div>
+                <table id="tabla-shows">
 
-        </table>
+                </table>
+            </div>
 
-        <div id="prueba-listar">
+        </section>
 
-        </div>
     </main>
     <footer>
         <div>
@@ -48,7 +57,7 @@
         <p>© 2023 Clara Cazéres | Proyecto Web, Diseño Digital | ORT Uruguay</p>
     </footer>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="scripts/shows.js"></script>
 </body>
 
 </html>

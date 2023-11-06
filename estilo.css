@@ -173,48 +173,7 @@ h4 {
 
 /* HOME - MAIN - SHOWS */
 
-#s-shows {
-    background-image: linear-gradient(var(--yellow), var(--orange));
-    background-size: 160%;
-}
 
-table {
-    border-collapse: collapse;
-    margin-bottom: 4em;
-}
-
-#s-shows tr {
-    height: 3em;
-    border-bottom: var(--gray) solid 1px;
-}
-
-#s-shows th {
-    text-align: start;
-}
-
-td {
-    font-weight: 600;
-    color: var(--gray);
-    text-align: start;
-}
-
-.bt-tabla {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--gray);
-    text-transform: uppercase;
-    padding-right: 0.4em;
-}
-
-.bt-tabla .material-symbols-outlined {
-    color: var(--gray);
-    margin-left: 0.4em;
-}
-
-.bt-tabla:hover {
-    color: #25252597;
-}
 
 
 /* HOME - MAIN - DISCOGRAFIA */
@@ -378,6 +337,52 @@ footer p {
 
 #fondo-bio{
     background-image: url(img/bio/fondo.png);
+}
+
+
+/* PAGINA SHOWS */
+
+#s-shows, #shows {
+    background-image: linear-gradient(var(--yellow), var(--orange));
+    background-size: 160%;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 4em;
+}
+
+#s-shows tr, #tabla-shows tr {
+    height: 3em;
+    border-bottom: var(--gray) solid 1px;
+}
+
+#s-shows th, #tabla-shows th {
+    text-align: start;
+}
+
+td, #tabla-shows td {
+    font-weight: 600;
+    color: var(--gray);
+    text-align: start;
+}
+
+.bt-tabla {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--gray);
+    text-transform: uppercase;
+    padding-right: 0.4em;
+}
+
+.bt-tabla .material-symbols-outlined {
+    color: var(--gray);
+    margin-left: 0.4em;
+}
+
+.bt-tabla:hover {
+    color: #25252597;
 }
 
 /* RESPONSIVE */
