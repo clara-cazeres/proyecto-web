@@ -32,18 +32,32 @@
             <div class="container flex-col">
                 <h2>Shows</h2>
                 <div id="filtro-shows">
-                    <input type="radio" name="fecha-shows" id="fechas-pasadas">
-                    <label for="fechas-pasadas">Fechas pasadas</label>
-                    <input type="radio" name="fecha-shows" id="fechas-proximas">
-                    <label for="fechas-proximas">Fechas proximas</label>
-                </div>
+                    <input type="radio" name="fecha-shows" id="todas-fechas" class="filtro-radio" checked>
+                    <label for="todas-fechas" class="filtro-label">Todas las fechas</label>
+
+                    <input type="radio" name="fecha-shows" id="fechas-pasadas" class="filtro-radio">
+                    <label for="fechas-pasadas" class="filtro-label">Fechas pasadas</label>
+                    
+                    <input type="radio" name="fecha-shows" id="fechas-proximas" class="filtro-radio">
+                    <label for="fechas-proximas" class="filtro-label">Fechas próximas</label>
+                </div>                
                 <table id="tabla-shows">
 
                 </table>
             </div>
-
         </section>
-
+        <div class="fondo-modal ocultar">
+            <div id="container-modal">
+                <button class="cerrar-modal">x</button>
+                <form action="" id="form-kuartito">
+                    
+                    <label for="input-codigo">Para acceder ingresá el código de tu entrada
+                        <input type="text" name="codigo" id="input-codigo" placeholder="Código">
+                    </label>
+                    <button id="bt-acceder" class="bt-primary">Acceder</button>
+                </form>
+            </div>
+        </div>
     </main>
     <footer>
         <div>
