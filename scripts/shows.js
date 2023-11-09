@@ -89,10 +89,23 @@ document.getElementById('todas-fechas').addEventListener('change', () => listarS
 let ventanaModal = document.querySelector(".fondo-modal");
 
 function abrirVentanaModal() {
-  ventanaModal.classList.remove("ocultar");
-  ventanaModal.classList.add("mostrar-modal");
+    ventanaModal.classList.remove("ocultar");
+    ventanaModal.classList.add("mostrar-modal");
 }
 function cerrarVentanaModal() {
     ventanaModal.classList.remove("mostrar-modal")
     ventanaModal.classList.add("ocultar");
 }
+
+//acceso
+
+document.querySelector('#bt-acceder').addEventListener("click", function () {
+    let codigoIngresado = document.querySelector("#input-codigo").value;
+    let codigoAcceso = "1234";
+
+    if (codigoIngresado === codigoAcceso) {
+        document.querySelector("#mensaje-error").textContent = "Código CORRECTO!"
+    } else {
+        document.querySelector("#mensaje-error").textContent = "Código incorrecto. Por favor, inténtelo de nuevo."
+    }
+});

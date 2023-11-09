@@ -239,7 +239,7 @@ h5 {
     padding-top: 4em;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
     border: none;
     border-bottom: white solid 1.2px;
     outline: none;
