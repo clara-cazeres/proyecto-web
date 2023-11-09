@@ -104,7 +104,7 @@ document.querySelector('#bt-acceder').addEventListener("click", function () {
     let codigoAcceso = "1234";
 
     if (codigoIngresado === codigoAcceso) {
-        document.querySelector("#mensaje-error").textContent = "Código CORRECTO!"
+        document.querySelector("#mensaje-error").textContent = "Código CORRECTO!" // la idea es que redirija al kuartito
     } else {
         document.querySelector("#mensaje-error").textContent = "Código incorrecto. Por favor, inténtelo de nuevo."
     }
