@@ -12,3 +12,23 @@ function listarDiscografia() {
         .catch(error => console.error('Error:', error));
 }
 listarDiscografia();
+
+
+
+//filtro busqueda en tiempo real
+let inputBuscar = document.querySelector("#input_buscar");
+
+inputBuscar.addEventListener("keyup", filtrarPorTexto);
+
+function filtrarPorTexto() {
+    let textoIngresado = inputBuscar.value;
+    let discosFiltrados = [];
+
+    for (let i = 0; i <= discos.length - 1; i++) {
+        if (discos[i].nombre.toUpperCase().includes(textoIngresado.toUpperCase()) || discos[i].fecha.toUpperCase().includes(textoIngresado.toUpperCase())) {
+            discosFiltrados.push(discos[i])
+        }
+    }
+
+    listarDiscografia();
+}

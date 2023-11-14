@@ -99,7 +99,8 @@ function cerrarVentanaModal() {
 
 //acceso
 
-document.querySelector('#bt-acceder').addEventListener("click", function () {
+document.querySelector('#bt-acceder').addEventListener("click", function (e) {
+e.preventDefault()
     let codigoIngresado = document.querySelector("#input-codigo").value;
     let codigoAcceso = "1234";
 
