@@ -476,6 +476,81 @@ td, #tabla-shows td {
     color: white;
 }
 
+
+
+/* USUARIO - Log In & Sign Up */
+
+#user-icon{
+    cursor: pointer;
+}
+
+#contenedor-user{
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#contenedor-user h1{
+    color: #E96A4E;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+#form-login, #form-signup {
+    color: white;
+
+    width: 40%;
+}
+#contenedor-user input[type=text], #contenedor-user input[type=password]{
+    width: 100%;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+
+}
+#bt-login, #bt-signup{
+    align-self: center;
+    color: white;
+}
+
+.div-checkbox{
+    padding: 1em 0;
+    color: #ffeae5;
+}
+
+#bt-redirigir-login, #bt-redirigir-signup{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#modal-success {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.611);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 3em;
+    border-radius: 0.4em;
+    text-align: center;
+}
+
+#bt-home{
+    border: #252525 solid 1px;
+    margin-bottom: 0;
+    align-self: center;
+    margin-top: 1em;
+}
+
+
 /* RESPONSIVE */
 
 @media all and (max-width: 768px) {

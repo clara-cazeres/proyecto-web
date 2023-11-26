@@ -19,7 +19,7 @@
                 <a href="shows.html">shows</a>
                 <a href="biografia.html">bio</a>
                 <a href="discografia.htmlß">discografía</a>
-                <span class="material-symbols-outlined">
+                <span id="user-icon" class="material-symbols-outlined">
                     account_circle
                 </span>
             </div>
@@ -46,22 +46,23 @@
                 </table>
             </div>
         </section>
-        <div class="fondo-modal ocultar">
-            <div id="container-modal">
-                <button class="cerrar-modal">x</button>
-                <form action="" id="form-kuartito">
-                    
-                    <label for="input-codigo">Para acceder ingresá el código de tu entrada
-                        <input type="text" name="codigo" id="input-codigo" placeholder="Código">
-                    </label>
-                    <p id="mensaje-error"></p>
-                    <input type="hidden" value="">
-                    <button type="submit" id="bt-acceder" class="bt-primary">Acceder</button>
-                    
-                </form>
-            </div>
-        </div>
     </main>
+
+    <div class="fondo-modal ocultar">
+        <div id="container-modal">
+            <button class="cerrar-modal">x</button>
+            <form action="" id="form-kuartito">
+                
+                <label for="input-codigo">Para acceder ingresá el código de tu entrada
+                    <input type="text" name="codigo" id="input-codigo" placeholder="Código">
+                </label>
+                <p id="mensaje-error"></p>
+                <input type="hidden" value="">
+                <button type="submit" id="bt-acceder" class="bt-primary">Acceder</button>
+                
+            </form>
+        </div>
+    </div>
     <footer>
         <div>
             <a href="https://www.instagram.com/elkuelgue/"><img src="img/icons/icons_ig.svg" alt=""></a>
@@ -75,6 +76,7 @@
     </footer>
 
     <script type="module" src="scripts/shows.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

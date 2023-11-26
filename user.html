@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Sign Up</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="contenedor-user">
+        <h1 id="titulo-user">Iniciar sesión</h1>
+        <form id="form-login" action="submit">
+            <label for="input-username1">Nombre de usuario</label>
+            <input type="text" name="username" id="input-usarname1">
+
+            <label for="input-password1">Contraseña</label>
+            <input type="password" name="password" id="input-password1">
+
+            <p class="mensaje-error"></p>
+            <input type="hidden" value="">
+
+            <button type="submit" id="bt-login" class="bt-primary">Ingresar</button>
+            <p>No tenés una cuenta? <span id="bt-redirigir-signup">Registrarme</span></p>
+        </form>
+
+        <form id="form-signup" action="submit" class="ocultar">
+            <label for="input-username2">Nombre de usuario</label>
+            <input type="text" name="username" id="input-username2">
+
+            <label for="input-email">Email</label>
+            <input type="text" name="email" id="input-email">
+
+            <label for="input-password2">Contraseña</label>
+            <input type="password" name="password" id="input-password2">
+            <p class="mensaje-error"></p>
+            <input type="hidden" value="">
+
+            <div class="div-checkbox">
+                <input type="checkbox" name="novedades" id="checkbox-novedades">
+                <label for="checkbox-novedades">Deseo recibir novedades por mail</label>
+            </div>
+
+            <button type="submit" id="bt-signup" class="bt-primary">Registrarme</button>
+            <p>Ya tenés una cuenta? <span id="bt-redirigir-login">Iniciar sesión</span></p>
+
+        </form>
+    </div>
+    <div id="modal-success" class="ocultar">
+        <div class="modal-content">
+            <p>El usuario fue registrado con éxito</p>
+            <button id="bt-home" class="bt-primary">Ingresar</button>
+        </div>
+    </div>
+    
+
+
+    <script type="module" src="scripts/users.js"></script>
+</body>
+
+</html>
