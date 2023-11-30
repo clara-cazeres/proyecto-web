@@ -56,17 +56,27 @@ function agregarEventListenersADinamicos() {
 
 function listarShows(tipo = '') {
     let url = 'http://localhost:3001/shows';
+    
+    //filtro por fecha
     if (tipo !== '') {
-        url += `?tipo=${tipo}`;
+        console.log(tipo)
+        url += `?filter=${tipo}`;
     }
 
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            //ordenar de mas reciente a menos reciente
+            data.sort((a,b) => new Date(b.fecha) - new Date(a.fecha));
+
+            //borro el contenido de la tabla
             limpiarTabla();
+
+            //agrego fila
             data.forEach(show => {
                 agregarFilaShow(show);
             });
+
             agregarEventListenersADinamicos();
         })
         .catch(error => console.error('Error:', error));
@@ -77,7 +87,11 @@ listarShows();
 
 //filtros por fecha
 
-document.getElementById('fechas-pasadas').addEventListener('change', () => listarShows('pasadas'));
+document.getElementById('fechas-pasadas').addEventListener('change', () => {
+    console.log('Cambio de filtro: pasadas');
+    listarShows('pasadas');
+});
+
 
 document.getElementById('fechas-proximas').addEventListener('change', () => listarShows('proximas'));
 
