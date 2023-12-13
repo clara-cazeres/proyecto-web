@@ -4,13 +4,13 @@ const formSignUp = document.querySelector("#form-signup");
 const formLogin = document.querySelector("#form-login");
 const titulo = document.querySelector("#titulo-user");
 
-document.querySelector('#bt-redirigir-login').addEventListener("click", function(){
+document.querySelector('#bt-redirigir-login').addEventListener("click", function () {
     formSignUp.classList.add("ocultar");
     formLogin.classList.remove("ocultar");
     titulo.textContent = 'Iniciar sesión';
 });
 
-document.querySelector('#bt-redirigir-signup').addEventListener("click", function(){
+document.querySelector('#bt-redirigir-signup').addEventListener("click", function () {
     formLogin.classList.add("ocultar");
     formSignUp.classList.remove("ocultar");
     titulo.textContent = 'Registrarme'
@@ -19,7 +19,50 @@ document.querySelector('#bt-redirigir-signup').addEventListener("click", functio
 
 // Funcion login
 
-document.addEventListener('DOMContentLoaded', function() {
+const API_URL = "http://localhost:3001"
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loginForm = document.getElementById("login-form");
+    const errorField = document.getElementById("mensaje-error");
+
+    if (loginForm) {
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            //obtengo valores de los input con los name q le puse al form
+
+            const { user, password } = e.target;
+
+            const loginURL = `${API_URL}/usuario/login`
+            const body = JSON.stringify({
+                username: user.value,
+                password: password.value
+            })
+
+            fetch(loginURL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: body,
+            }).then((response) => {
+                if(response.status ===200){
+                    return response.JSON
+                } else{
+                    errorField.innerHTML = "Usuario o contra incorrecta"
+                }
+            }).then((data) =>{
+                if(data){
+                    errorField.innerHTML = "";
+                    
+                }
+            })
+        })
+    }
+
+    e.preventDefault();
+
+
+})
+
+/* document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.getElementById('bt-login');
     const errorMsg = document.querySelector('.mensaje-error');
 
@@ -64,18 +107,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+}); */
 
 
 //Funcion Sign Up
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const signupForm = document.getElementById('form-signup');
     const errorMsg = signupForm.querySelector('.mensaje-error');
     const modalSuccess = document.getElementById('modal-success');
     const btHome = document.getElementById('bt-home');
 
-    signupForm.addEventListener('submit', function(event) {
+    signupForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const username = document.getElementById('input-username2').value;
@@ -96,30 +139,30 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify({ username, email, password })
         })
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else if (response.status === 400) {
-                return response.text().then(text => { throw new Error(text) });
-            } else {
-                throw new Error('Error en el servidor');
-            }
-        })
-        .then(data => {
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else if (response.status === 400) {
+                    return response.text().then(text => { throw new Error(text) });
+                } else {
+                    throw new Error('Error en el servidor');
+                }
+            })
+            .then(data => {
 
-            console.log('Usuario registrado:', data);
-            // Mostrar pop-up de éxito
-            modalSuccess.style.display = 'flex';
+                console.log('Usuario registrado:', data);
+                // Mostrar pop-up de éxito
+                modalSuccess.style.display = 'flex';
 
-            // Evento de clic para el botón del pop-up
-            btHome.addEventListener('click', function() {
-                window.location.href = 'index.html'; // Cambia esto a tu página de inicio
+                // Evento de clic para el botón del pop-up
+                btHome.addEventListener('click', function () {
+                    window.location.href = 'index.html'; // Cambia esto a tu página de inicio
+                });
+            })
+            .catch(error => {
+                // Mostrar mensaje de error basado en la respuesta del servidor
+                errorMsg.textContent = error.message;
             });
-        })
-        .catch(error => {
-            // Mostrar mensaje de error basado en la respuesta del servidor
-            errorMsg.textContent = error.message;
-        });
     });
 });
 

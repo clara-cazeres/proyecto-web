@@ -147,7 +147,7 @@ nav a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2%;
-    margin-bottom: 4em;
+    padding-bottom: 4em;
 }
 
 #s-news article:first-of-type {
@@ -158,10 +158,10 @@ nav a {
     color: white;
 }
 
-#s-news article img {
+#s-news article img, #div-noticias article img {
     width: 100%;
     border-radius: 0.4em;
-    height: 18em;
+    height: 70%;
     object-fit: cover;
 }
 
@@ -186,15 +186,15 @@ h4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2%;
-    margin-bottom: 4em;
+    padding-bottom: 4em;
 }
 
-.grid-disc div {
+.grid-disc article {
     text-align: center;
     height: fit-content;
 }
 
-#s-dis div img {
+.grid-disc article img {
     width: 100%;
     border-radius: 0.4em;
 }
@@ -223,10 +223,11 @@ h5 {
 }
 
 /* Página DISCOGRAFÍA */
-#video-discografia{
+#video-discografia {
     width: 100%;
     height: 70vh;
 }
+
 
 /* HOME - MAIN - FORM */
 
@@ -245,7 +246,8 @@ h5 {
     padding-top: 4em;
 }
 
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
     border: none;
     border-bottom: white solid 1.2px;
     outline: none;
@@ -319,7 +321,7 @@ footer p {
 }
 
 
-/* Página NOTICIAS */
+/* Página BIO */
 
 #slider-news img {
     height: 80vh;
@@ -341,19 +343,25 @@ footer p {
     width: 15%;
 }
 
-#fondo-bio{
+#fondo-bio {
     background-image: url(img/bio/fondo.png);
 }
 
+/* Página NOTICIAS */
+
+#div-noticias{
+    width: 90%;
+}
 
 /* PAGINA SHOWS */
 
-#s-shows, #shows {
+#s-shows,
+#shows {
     background-image: linear-gradient(var(--yellow), var(--orange));
     background-size: 160%;
 }
 
-#filtro-shows{
+#filtro-shows {
     margin-bottom: 1em;
 }
 
@@ -373,9 +381,9 @@ footer p {
 
 }
 
-.filtro-radio:checked + .filtro-label {
-    background-color: var(--gray); 
-    color: white; 
+.filtro-radio:checked+.filtro-label {
+    background-color: var(--gray);
+    color: white;
 }
 
 .filtro-label:hover {
@@ -387,16 +395,19 @@ table {
     margin-bottom: 4em;
 }
 
-#s-shows tr, #tabla-shows tr {
+#s-shows tr,
+#tabla-shows tr {
     height: 3em;
     border-bottom: var(--gray) solid 1px;
 }
 
-#s-shows th, #tabla-shows th {
+#s-shows th,
+#tabla-shows th {
     text-align: start;
 }
 
-td, #tabla-shows td {
+td,
+#tabla-shows td {
     font-weight: 600;
     color: var(--gray);
     text-align: start;
@@ -421,7 +432,7 @@ td, #tabla-shows td {
 }
 
 /* ventana modal kuartito */
-.fondo-modal{
+.fondo-modal {
     width: 100%;
     height: 100vh;
     background-color: #25252584;
@@ -430,7 +441,7 @@ td, #tabla-shows td {
     left: 0;
 }
 
-#container-modal{
+#container-modal {
     background-color: var(--gray);
     width: 50%;
     height: fit-content;
@@ -441,17 +452,17 @@ td, #tabla-shows td {
     justify-content: flex-start;
 }
 
-.ocultar{
+.ocultar {
     display: none;
 }
 
-.mostrar-modal{
+.mostrar-modal {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cerrar-modal{
+.cerrar-modal {
     border: none;
     background-color: transparent;
     color: white;
@@ -461,17 +472,17 @@ td, #tabla-shows td {
     cursor: pointer;
 }
 
-#form-kuartito label{
+#form-kuartito label {
     color: white;
 }
 
-#form-kuartito input::placeholder{
+#form-kuartito input::placeholder {
     font-size: 0.8em;
     font-family: 'Raleway', sans-serif;
     color: white;
 }
 
-#bt-acceder{
+#bt-acceder {
     margin-bottom: 1em;
     color: white;
 }
@@ -480,11 +491,11 @@ td, #tabla-shows td {
 
 /* USUARIO - Log In & Sign Up */
 
-#user-icon{
+#user-icon {
     cursor: pointer;
 }
 
-#contenedor-user{
+#contenedor-user {
     background-color: #252525;
     display: flex;
     flex-direction: column;
@@ -492,34 +503,41 @@ td, #tabla-shows td {
     align-items: center;
     height: 100vh;
 }
-#contenedor-user h1{
+
+#contenedor-user h1 {
     color: #E96A4E;
     text-transform: uppercase;
     margin-bottom: 1em;
 }
 
-#form-login, #form-signup {
+#form-login,
+#form-signup {
     color: white;
 
     width: 40%;
 }
-#contenedor-user input[type=text], #contenedor-user input[type=password]{
+
+#contenedor-user input[type=text],
+#contenedor-user input[type=password] {
     width: 100%;
     color: white;
     font-family: 'Raleway', sans-serif;
 
 }
-#bt-login, #bt-signup{
+
+#bt-login,
+#bt-signup {
     align-self: center;
     color: white;
 }
 
-.div-checkbox{
+.div-checkbox {
     padding: 1em 0;
     color: #ffeae5;
 }
 
-#bt-redirigir-login, #bt-redirigir-signup{
+#bt-redirigir-login,
+#bt-redirigir-signup {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -543,7 +561,7 @@ td, #tabla-shows td {
     text-align: center;
 }
 
-#bt-home{
+#bt-home {
     border: #252525 solid 1px;
     margin-bottom: 0;
     align-self: center;

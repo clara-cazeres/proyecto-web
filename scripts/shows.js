@@ -31,7 +31,7 @@ function agregarFilaShow(show) {
     </a>
     </td>
     <td>
-        <div class="bt-tabla link-kuartito"> 
+        <div class="bt-tabla link-kuartito" data-id="${show.customID}">
             <p>ingresar</p>
             <span class="material-symbols-outlined">arrow_forward</span>
         </div>
@@ -102,10 +102,14 @@ document.getElementById('todas-fechas').addEventListener('change', () => listarS
 
 let ventanaModal = document.querySelector(".fondo-modal");
 
+let showActualId = null; // variable global almacena el customID del show actual
+
 function abrirVentanaModal() {
+    showActualId = this.getAttribute("data-id"); //this - boton q fue clickeado 
     ventanaModal.classList.remove("ocultar");
     ventanaModal.classList.add("mostrar-modal");
 }
+
 function cerrarVentanaModal() {
     ventanaModal.classList.remove("mostrar-modal")
     ventanaModal.classList.add("ocultar");
@@ -120,6 +124,8 @@ e.preventDefault()
 
     if (codigoIngresado === codigoAcceso) {
         document.querySelector("#mensaje-error").textContent = "Código CORRECTO!" // la idea es que redirija al kuartito
+        window.location.href = `/kuartito.html?showId=${showActualId}`;
+
     } else {
         document.querySelector("#mensaje-error").textContent = "Código incorrecto. Por favor, inténtelo de nuevo."
     }
