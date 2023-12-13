@@ -12,15 +12,19 @@
     <header>
         <nav>
             <a href="index.html"><img src="img/logo-ek.png" alt="logo"></a>
-            <div>
-                <a href="noticias.html">noticias</a>
-                <a href="shows.html">shows</a>
-                <a href="biografia.html">bio</a>
-                <a href="discografia.html">discografía</a>
-                <span id="user-icon" class="material-symbols-outlined">
+            <ul>
+                <li><a href="noticias.html">noticias</a></li>
+                <li><a href="shows.html">shows</a></li>
+                <li><a href="biografia.html">bio</a></li>
+                <li><a href="discografia.html">discografía</a></li>
+                <li><span id="user-icon" class="material-symbols-outlined">
                     account_circle
-                </span>
-            </div>
+                </span></li>
+                <li id="user-header"></li>
+                <li><span id="bt-logout" class="material-symbols-outlined ocultar">
+                    logout
+                </span></li>
+            </ul>
             <span id="icon-menu" class="material-symbols-outlined">menu</span>
         </nav>
     </header>
@@ -60,5 +64,8 @@
     </footer>
 
     <script type="module" src="scripts/discografia.js"></script>
+    <script type="module" src="scripts/usuarios/checkUser.js"></script>
+    <script type="module" src="scripts/usuarios/login.js"></script>
+
 </body>
 </html>

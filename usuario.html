@@ -10,7 +10,7 @@
 <body>
     <div id="contenedor-user">
         <h1 id="titulo-user">Iniciar sesión</h1>
-        <form id="form-login" action="submit">
+        <form id="form-login" action="submit" method="post">
             <label for="input-username-login">Nombre de usuario</label>
             <input type="text" name="username" id="input-username-login">
 
@@ -52,10 +52,10 @@
             <button id="bt-home" class="bt-primary">Ingresar</button>
         </div>
     </div>
-    
 
-
-    <script type="module" src="scripts/users.js"></script>
+    <script type="module" src="/scripts/usuarios/forms.js"></script>
+    <script type="module" src="/scripts/usuarios/login.js"></script>
+    <script type="module" src="scripts/usuarios/checkUser.js"></script>
 </body>
 
 </html>

@@ -114,14 +114,15 @@ nav {
     margin: auto;
 }
 
-nav div {
+nav ul {
     width: 400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    list-style-type: none;
 }
 
-nav a {
+nav a, nav li {
     color: white;
     text-decoration: none;
 }

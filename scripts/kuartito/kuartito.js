@@ -1,6 +1,9 @@
+
+
+
 document.getElementById('enviar-comentario').addEventListener('click', function() {
     const comentarioTexto = document.getElementById('texto-comentario').value;
-    const customShowId = 'elIdDelShow'; // Asegúrate de reemplazar esto con el ID real del show
+    const customShowId = `${customId}`; // Asegúrate de reemplazar esto con el ID real del show
 
     fetch('/comentarios', {
         method: 'POST',
@@ -34,6 +37,6 @@ document.getElementById('enviar-comentario').addEventListener('click', function(
     })
     .catch(error => {
         console.error('Error:', error);
-        // Aquí puedes manejar el error, por ejemplo, mostrando un mensaje al usuario
+        // mostrar un mensaje al usuario
     });
 });

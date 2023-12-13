@@ -40,15 +40,35 @@ function agregarFilaShow(show) {
     tablaShows.appendChild(fila);
 }
 
+
+const USER_KEY = "user"; 
+const loginPath = "usuario.html";
+
+function checkUserForKuartito() {
+    const userData = localStorage.getItem(USER_KEY);
+    const actualPath = window.location.pathname;
+
+    // Si el usuario no está logueado y está en una página que requiere login, redirigir al login
+    if (!userData && actualPath.includes('shows.html')) {
+        window.location.href = loginPath;
+    }
+}
+
 function agregarEventListenersADinamicos() {
     const botonesAbrirKuartito = document.querySelectorAll(".link-kuartito");
-    const botonesCerrarKuartito = document.querySelectorAll(".cerrar-modal")
     botonesAbrirKuartito.forEach(boton => {
-        boton.addEventListener('click', abrirVentanaModal);
+        boton.addEventListener('click', () => verificarUsuarioYAbrirModal(boton));
     });
-    botonesCerrarKuartito.forEach(boton => {
-        boton.addEventListener('click', cerrarVentanaModal);
-    });
+}
+
+function verificarUsuarioYAbrirModal(boton) {
+    const userData = localStorage.getItem(USER_KEY);
+
+    if (!userData) {
+        window.location.href = loginPath; // Redirige al login si no está logueado
+    } else {
+        abrirVentanaModal.call(boton); // Llama a abrirVentanaModal con el contexto del botón
+    }
 }
 
 
