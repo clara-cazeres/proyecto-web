@@ -13,6 +13,7 @@ function mostrarDetallesDeLaNoticia() {
             document.getElementById('fecha-noticia').innerText = new Date(noticia.fecha).toLocaleDateString('es-ES');
             document.getElementById('extracto-noticia').innerText = noticia.extracto;
             document.getElementById('imagen-noticia').src = noticia.imagen;
+            document.getElementById('portada-noticia').src = noticia.portada;
             document.getElementById('texto-noticia').innerText = noticia.texto;
         })
         .catch(error => console.error('Error:', error));
