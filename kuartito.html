@@ -32,32 +32,60 @@
     </header>
     <main>
         <div id="bg-kuartito">
-            
-            <section class="detalle-show">
-                <h1>kuartito del show en <span id="show-lugar"></span></h1>
-                <p>Fecha: <strong id="show-fecha"></strong></p>
-                <p>Ciudad, País: <strong id="show-ciudad-pais"></strong></p>
-                <p>Integrantes del kuartito: <strong id="show-integrantes"></strong></p>
-            </section>
+            <div id="banner-kuartito">
+                <h1>kuartito - show en <span id="show-lugar"></span></h1>
+            </div>
+            <div class="container">
+                <section class="detalle-show">
+                    <h2>Sobre el show</h2>
+                <table>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Ciudad</th>
+                        <th>Integrantes del kuartito</th>
+                    </tr>
+                    <tr>
+                        <td id="show-fecha"></td>
+                        <td id="show-ciudad-pais"></td>
+                        <td id="show-integrantes"></td>
+                    </tr>
+                </table>
+                </section>
+    
+                <section>
+                    <h2>Galería de fotos</h2>
+                    <div id="photos">
+    
+                    </div>
+                    <div id="div-upload">
+                        <h3>Subí tu foto para formar parte de la galería</h3>
+                        <form method="post" id="uploadForm">
+                            <label for="file">Subir imagen</label>
+                            <input type="file" name="file" id="file" required>
+                            <input class="bt-primary" type="submit" value="Subir" id="upload">
+                        </form>
+                    </div>
+                    
+                </section>
 
-            <section>
-                <div id="photos">
+            </div>
+            <div id="bg-comentarios">
+                <section class="comentarios container">
+    
+                    <h3>Últimos comentarios</h3>
+                    <div id="div-comentarios">
+    
+                    </div>
+    
+                    <div id="formComentarios">
+                        <label for="texto-comentario">Escribí tu comentario acá:</label>
+                        <textarea id="texto-comentario"></textarea>
+                        <button id="enviar-comentario" class="bt-primary">Enviar Comentario</button>
+                    </div>
+                    
+                </section>
+            </div>
 
-                </div>
-                <h3>Subí tu foto para formar parte de la galería</h3>
-                <form method="post" id="uploadForm">
-                    <label for="file">Subir imagen</label>
-                    <input type="file" name="file" id="file" required>
-                    <input type="submit" value="Subir" id="upload">
-                </form>
-            </section>
-
-            <section class="comentarios">
-                <h2>Comentarios</h2>
-                <textarea id="texto-comentario" placeholder="Escribe tu comentario aquí"></textarea>
-                <button id="enviar-comentario">Enviar Comentario</button>
-                <!-- Aquí se mostrarán los comentarios -->
-            </section>
     </main>
 
 
