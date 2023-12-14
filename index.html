@@ -17,51 +17,35 @@
             <ul>
                 <li><a href="noticias.html">noticias</a></li>
                 <li><a href="shows.html">shows</a></li>
-                <li><a href="biografia.html">bio</a></li>
                 <li><a href="discografia.html">discografía</a></li>
                 <li><span id="user-icon" class="material-symbols-outlined">
-                    account_circle
-                </span></li>
+                        account_circle
+                    </span></li>
                 <li id="user-header"></li>
                 <li><span id="bt-logout" class="material-symbols-outlined ocultar">
-                    logout
-                </span></li>
+                        logout
+                    </span></li>
             </ul>
             <span id="icon-menu" class="material-symbols-outlined">menu</span>
         </nav>
     </header>
     <section id="s-hero">
 
+        <img src="img/logo-ek.png" alt="">
+        <img src="img/ilustraciones/icon_ruli.svg" alt="">
     </section>
-
     <main>
+
         <section id="s-news">
             <div class="container flex-col">
                 <h2>Noticias</h2>
-                <div class="grid-news">
-                    <article>
-                        <img src="img/img-noticias/noticia1-portada.jpeg" alt="el kuelgue noticia">
-                        <h4>"Nuestro mundo está creado a través del humor, es nuestra forma de vivir, de denunciar y de
-                            liberarse"</h4>
-                        <p class="nota">10 de mayo, 2023</p>
-                    </article>
-                    <article>
-                        <img src="img/img-noticias/noticia2-portada.jpg" alt="el kuelgue noticia">
-                        <h4>"El Kuelgue llegó al Luna Park para celebrar casi 20 años de música"</h4>
-                        <p class="nota">18 de septiembre, 2023</p>
-                    </article>
-                    <article>
-                        <img src="img/img-noticias/noticia3-portada.jpg" alt="el kuelgue noticia">
-                        <h4>"El Kuelgue puso a volar a la Nave Cultural"</h4>
-                        <p class="nota">1 de octubre, 2023</p>
-                    </article>
+                <div class="grid-news" id="div-noticias">
                 </div>
                 <div class="bt-primary">
                     <a href="noticias.html">Ver todas las noticias</a><span class="material-symbols-outlined">
                         arrow_forward
                     </span>
                 </div>
-
             </div>
         </section>
         <section id="s-shows">
@@ -179,51 +163,20 @@
             </div>
         </section>
 
-        <section id="s-form">
 
-            <div class="container flex-col">
-                <p>¡Mantente al tanto de nuestras novedades!</p>
-                <h2>Suscribite a nuestro newsletter</h2>
-                <div class="flex-row container-form">
-                    <form action="" id="form-newsletter" class="flex-col">
-                        <label for="input-name">
-                            <input type="text" name="name" id="input-name" placeholder="Nombre">
-                        </label>
-                        
-                        <label for="input-mail">
-                            <input type="text" name="mail" id="input-mail" placeholder="Mail">
-                        </label>
-                        <div>
-                            <input type="checkbox" id="input-checkbox">
-                            <label for="input-checkbox">Acepto los términos y condiciones</label>
-                        </div>
-
-                        <button class="bt-primary" type="submit">
-                            Enviar
-                        </button>
-                    </form>
-                    <div>
-                        <img src="img/ilustraciones/icon_ruli.svg" alt="">
-                    </div>
-
-                </div>
-
-
-            </div>
-            
-        </section>
     </main>
     <footer>
         <div>
             <a href="https://www.instagram.com/elkuelgue/"><img src="img/icons/icons_ig.svg" alt=""></a>
             <a href="https://www.facebook.com/ElKuelgue/?fref=ts"><img src="img/icons/icons_fb.svg" alt=""></a>
-            <a href="https://open.spotify.com/artist/6jRUKVZllu1wtgXHbqvUmT?si=kLiB7PShQDC0x8Jr-sXi2A"><img src="img/icons/icons_spotify.svg" alt=""></a>
+            <a href="https://open.spotify.com/artist/6jRUKVZllu1wtgXHbqvUmT?si=kLiB7PShQDC0x8Jr-sXi2A"><img
+                    src="img/icons/icons_spotify.svg" alt=""></a>
             <a href="https://www.youtube.com/@ElKuelgue"><img src="img/icons/icons_yt.svg" alt=""></a>
         </div>
 
         <p>© 2023 Clara Cazéres | Proyecto Web, Diseño Digital | ORT Uruguay</p>
     </footer>
-
+    <script type="module" src="scripts/index.js"></script>
     <script type="module" src="main.js"></script>
     <script type="module" src="scripts/usuarios/login.js"></script>
     <script type="module" src="scripts/usuarios/checkUser.js"></script>

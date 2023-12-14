@@ -1,9 +1,14 @@
-function listarNoticias() {
+function listarUltimasNoticias() {
     fetch('http://localhost:3001/noticias')
         .then(response => response.json())
         .then(noticias => {
-            const divNoticias = document.getElementById('div-noticias');
-            noticias.forEach(noticia => {
+            const divNoticias = document.getElementById('div-noticias'); 
+            divNoticias.innerHTML = ''; // Limpia el contenido existente
+
+            // Obtener solo las últimas 3 noticias
+            const ultimasNoticias = noticias.slice(0, 3);
+
+            ultimasNoticias.forEach(noticia => {
                 const fecha = new Date(noticia.fecha);
                 const opcionesFecha = { day: 'numeric', month: 'long', year: 'numeric' };
                 const fechaFormateada = new Intl.DateTimeFormat('es-ES', opcionesFecha).format(fecha);
@@ -14,10 +19,9 @@ function listarNoticias() {
                     <h4>${noticia.titulo}</h4>
                     <p class="nota">${fechaFormateada}</p>
                 `;
-
                 divNoticias.appendChild(article);
 
-                // Añadir un manejador de eventos para redirigir a la página de detalles
+                // redirigir a la página de detalles
                 article.addEventListener('click', () => {
                     window.location.href = `ampliacion-noticia.html?id=${noticia._id}`;
                 });
@@ -26,5 +30,4 @@ function listarNoticias() {
         .catch(error => console.error('Error:', error));
 }
 
-listarNoticias();
-
+listarUltimasNoticias();
