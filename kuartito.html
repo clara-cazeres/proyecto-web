@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,46 +20,54 @@
                 <li><a href="biografia.html">bio</a></li>
                 <li><a href="discografia.html">discografía</a></li>
                 <li><span id="user-icon" class="material-symbols-outlined">
-                    account_circle
-                </span></li>
+                        account_circle
+                    </span></li>
                 <li id="user-header"></li>
                 <li><span id="bt-logout" class="material-symbols-outlined ocultar">
-                    logout
-                </span></li>
+                        logout
+                    </span></li>
             </ul>
             <span id="icon-menu" class="material-symbols-outlined">menu</span>
         </nav>
     </header>
     <main>
-        <h1>kuartito prueba ampliacion</h1>
-        <section class="detalle-show">
-                <h2>Detalles del Show</h2>
-                <div class="info-show">
-                    <h3>Información del Show</h3>
+        <div id="bg-kuartito">
+            
+            <section class="detalle-show">
+                <h1>kuartito del show en <span id="show-lugar"></span></h1>
+                <p>Fecha: <strong id="show-fecha"></strong></p>
+                <p>Ciudad, País: <strong id="show-ciudad-pais"></strong></p>
+                <p>Integrantes del kuartito: <strong id="show-integrantes"></strong></p>
+            </section>
+
+            <section>
+                <div id="photos">
+
                 </div>
-        </section>
-        <section class="interaccion-usuario">
-            <h2>Comentarios y Fotos</h2>
-            <div class="comentarios">
-                <h3>Deja tu Comentario</h3>
+                <h3>Subí tu foto para formar parte de la galería</h3>
+                <form method="post" id="uploadForm">
+                    <label for="file">Subir imagen</label>
+                    <input type="file" name="file" id="file" required>
+                    <input type="submit" value="Subir" id="upload">
+                </form>
+            </section>
+
+            <section class="comentarios">
+                <h2>Comentarios</h2>
                 <textarea id="texto-comentario" placeholder="Escribe tu comentario aquí"></textarea>
                 <button id="enviar-comentario">Enviar Comentario</button>
-            </div>
-            <div class="subida-fotos">
-                <h3>Sube tus Fotos o Videos</h3>
-                <input type="file" id="archivo-multimedia" accept="image/*,video/*">
-                <button id="subir-archivo">Subir Archivo</button>
-            </div>
-            <!--  comentarios y archivos subidos -->
-        </section>
-        
-       
+                <!-- Aquí se mostrarán los comentarios -->
+            </section>
     </main>
+
+
+    </div>
     <footer>
         <div>
             <a href="https://www.instagram.com/elkuelgue/"><img src="img/icons/icons_ig.svg" alt=""></a>
             <a href="https://www.facebook.com/ElKuelgue/?fref=ts"><img src="img/icons/icons_fb.svg" alt=""></a>
-            <a href="https://open.spotify.com/artist/6jRUKVZllu1wtgXHbqvUmT?si=kLiB7PShQDC0x8Jr-sXi2A"><img src="img/icons/icons_spotify.svg" alt=""></a>
+            <a href="https://open.spotify.com/artist/6jRUKVZllu1wtgXHbqvUmT?si=kLiB7PShQDC0x8Jr-sXi2A"><img
+                    src="img/icons/icons_spotify.svg" alt=""></a>
             <a href="https://www.youtube.com/@ElKuelgue"><img src="img/icons/icons_yt.svg" alt=""></a>
         </div>
 
@@ -68,4 +78,5 @@
     <script type="module" src="scripts/usuarios/checkUser.js"></script>
 
 </body>
+
 </html>

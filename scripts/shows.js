@@ -150,3 +150,5 @@ e.preventDefault()
         document.querySelector("#mensaje-error").textContent = "Código incorrecto. Por favor, inténtelo de nuevo."
     }
 });
+
+

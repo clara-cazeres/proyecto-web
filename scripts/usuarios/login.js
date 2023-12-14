@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Enviar solicitud al backend
-        fetch('http://localhost:3001/users/signup', {
+        fetch('http://localhost:3001/usuario/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
