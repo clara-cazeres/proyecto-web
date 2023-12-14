@@ -11,14 +11,62 @@
 </head>
 
 <body>
-    <div id="detalles-disco">
-        <img id="imagen-disco" src="" alt="Portada del disco">
-        <h1 id="nombre-disco"></h1>
-        <p id="ano-disco"></p>
-        <p id="tipo-disco"></p>
-        <div id="canciones-disco"></div>
-        <a id="link-spotify" href="" target="_blank">Escuchar en Spotify</a>
-    </div>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logo-ek.png" alt="logo"></a>
+            <ul>
+                <li><a href="noticias.html">noticias</a></li>
+                <li><a href="shows.html">shows</a></li>
+                <li><a href="discografia.html">discografía</a></li>
+                <li><span id="user-icon" class="material-symbols-outlined">
+                        account_circle
+                    </span></li>
+                <li id="user-header"></li>
+                <li><span id="bt-logout" class="material-symbols-outlined ocultar">
+                        logout
+                    </span></li>
+            </ul>
+            <span id="icon-menu" class="material-symbols-outlined">menu</span>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <section class="container" id="detalles-disco">
+                <img id="imagen-disco" src="" alt="Portada del disco">
+                <div>
+                    <h1 id="nombre-disco"></h1>
+                    <p id="year-tipo-disco"></p>
+
+                    <p>Canciones:</p>
+                    <ol id="canciones-disco"></ol>
+                </div>
+
+            </section>
+
+        </div>
+        <div>
+            <section id="spotify-link">
+                <div class="container">
+                    <h3>Escuchalo en spotify</h3>
+                    <iframe id="spotify-iframe" src="" style="display: none; width: 100%; height: 80px;" frameborder="0"
+                    allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <a href="https://www.instagram.com/elkuelgue/"><img src="img/icons/icons_ig.svg" alt=""></a>
+            <a href="https://www.facebook.com/ElKuelgue/?fref=ts"><img src="img/icons/icons_fb.svg" alt=""></a>
+            <a href="https://open.spotify.com/artist/6jRUKVZllu1wtgXHbqvUmT?si=kLiB7PShQDC0x8Jr-sXi2A"><img
+                    src="img/icons/icons_spotify.svg" alt=""></a>
+            <a href="https://www.youtube.com/@ElKuelgue"><img src="img/icons/icons_yt.svg" alt=""></a>
+        </div>
+
+        <p>© 2023 Clara Cazéres | Proyecto Web, Diseño Digital | ORT Uruguay</p>
+    </footer>
+
     <script src="scripts/ampliacionDisco.js"></script>
 
 </body>

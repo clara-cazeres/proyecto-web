@@ -9,31 +9,31 @@ function mostrarDetallesDelDisco() {
     fetch(`http://localhost:3001/discografia/${idDisco}`)
         .then(response => response.json())
         .then(disco => {
+            // Actualizar título y detalles del disco
             document.getElementById('nombre-disco').innerText = disco.nombre;
-            document.getElementById('ano-disco').innerText = new Date(disco.fecha).getFullYear();
-            document.getElementById('tipo-disco').innerText = disco.tipo;
+            document.getElementById('year-tipo-disco').innerText = `${new Date(disco.fecha).getFullYear()} - ${disco.tipo}`;
             
             // Actualizar la imagen de la portada
             const imagen = document.getElementById('imagen-disco');
             imagen.src = `https://res.cloudinary.com/dflzegwev/image/upload/v1701614049/fotos-discografia/${disco.portada}.jpg`;
             imagen.alt = `Portada del disco ${disco.nombre}`;
 
-            // Actualizar el enlace a Spotify
-            const linkSpotify = document.getElementById('link-spotify');
+            // Actualizar el iframe de Spotify
+            const spotifyIframe = document.getElementById('spotify-iframe');
             if (disco.linkspotify) {
-                linkSpotify.href = disco.linkspotify;
-                linkSpotify.style.display = 'block';
+                spotifyIframe.src = disco.linkspotify;
+                spotifyIframe.style.display = 'block';
             } else {
-                linkSpotify.style.display = 'none';
+                spotifyIframe.style.display = 'none';
             }
 
             // Listar las canciones
-            const divCanciones = document.getElementById('canciones-disco');
-            divCanciones.innerHTML = ''; // Limpiar contenido anterior
+            const ulCanciones = document.getElementById('canciones-disco');
+            ulCanciones.innerHTML = ''; // Limpiar contenido anterior
             disco.canciones.forEach(cancion => {
-                const p = document.createElement('p');
-                p.innerText = cancion;
-                divCanciones.appendChild(p);
+                const li = document.createElement('li');
+                li.innerText = cancion;
+                ulCanciones.appendChild(li);
             });
         })
         .catch(error => console.error('Error:', error));

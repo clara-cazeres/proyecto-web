@@ -141,13 +141,13 @@ nav li {
     justify-content: center;
 }
 
-#s-hero img:first-of-type{
+#s-hero img:first-of-type {
     width: 50%;
     object-fit: contain;
     margin-right: 2em;
 }
 
-#s-hero img:nth-of-type(2){
+#s-hero img:nth-of-type(2) {
     width: 20%;
     color: white;
 }
@@ -193,12 +193,14 @@ h4 {
 /* HOME - MAIN - SHOWS */
 
 
-
-
-/* HOME - MAIN - DISCOGRAFIA */
+/* HOME DISCOGRAFIA & PAGINA DISCOGRAFIA */
 
 #s-dis h2 {
-    color: var(--gray);
+    color: var(--blue);
+}
+
+#s-dis iframe{
+    margin-bottom: 1em;
 }
 
 .grid-disc {
@@ -241,13 +243,12 @@ h5 {
     background-color: #4f81f54a;
 }
 
-/* Página DISCOGRAFÍA */
-#pagina-discografia h2{
+#pagina-discografia h2 {
     color: #E96A4E;
     margin: 0;
 }
 
-#pagina-discografia input{
+#pagina-discografia input {
     color: #252525;
     border: #252525 solid 1px;
     border-radius: 0.4em;
@@ -256,77 +257,52 @@ h5 {
     width: 50%;
 }
 
-#discografia-container{
+#discografia-container {
     margin-bottom: 7em;
 }
 
-#discografia-container article{
+#discografia-container article {
     cursor: pointer;
 }
 
-/* HOME - MAIN - FORM */
-
-#s-form {
-    background-image: linear-gradient(15deg, var(--orange), var(--purple));
+/* amplaicion disco */
+#detalles-disco {
+    display: flex;
+    padding: 2em 0;
 }
 
-#s-form h2 {
-    padding-top: 0.4em;
+#detalles-disco h1{
+    color: #E96A4E;
+    text-transform: uppercase;
+    font-size: 2em;
 }
 
-#s-form p {
-    color: white;
-    font-size: 1.2em;
-    font-weight: 500;
-    padding-top: 4em;
+#imagen-disco {
+    width: 30%;
+    object-fit: cover;
+    border-radius: 0.6em;
+    padding-right: 1em;
 }
 
-input[type=text],
-input[type=password] {
-    border: none;
-    border-bottom: white solid 1.2px;
-    outline: none;
-    background-color: transparent;
-    width: 80%;
-    height: 3em;
-    margin-bottom: 2em;
+#detalles-disco > div {
+    flex-grow: 1;
+}
+#year-tipo-disco {
+    margin-bottom: 1em;
+    font-weight: 600;
 }
 
-#form-newsletter input::placeholder,
-#form-newsletter input[type=text] {
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2em;
+#detalles-disco ol{
+    padding: 0 1em;
 }
 
-#form-newsletter label {
-    color: white;
-    font-size: 0.8em;
+#spotify-link{
+    background-color: #E96A4E;
 }
 
-#form-newsletter div {
-    margin-bottom: 1.8em;
+#spotify-link > div {
+    padding: 1.4em 0;
 }
-
-#form-newsletter button {
-    color: white;
-    align-self: flex-start;
-}
-
-#form-newsletter {
-    width: 60%;
-}
-
-.container-form>div {
-    width: 40%;
-    text-align: center;
-}
-
-.container-form img {
-    width: 50%;
-
-}
-
 
 /* FOOTER */
 
@@ -355,42 +331,16 @@ footer p {
     font-weight: 200;
 }
 
-
-/* Página BIO */
-
-#slider-news img {
-    height: 80vh;
-    width: 100%;
-    object-fit: cover;
-}
-
-#info-bio>p {
-    width: 80%;
-    margin: auto;
-}
-
-#fotos-equipo {
-    display: flex;
-    justify-content: space-between;
-}
-
-#fotos-equipo img {
-    width: 15%;
-}
-
-#fondo-bio {
-    background-image: url(img/bio/fondo.png);
-}
-
 /* Página NOTICIAS */
 
 #div-noticias {
     width: 100%;
 }
 
-#fondo-noticias h2{
+#fondo-noticias h2 {
     color: #E96A4E;
 }
+
 /* PAGINA SHOWS */
 
 #s-shows,
@@ -666,14 +616,16 @@ td,
     border-radius: 0.4em;
 }
 
-#uploadForm, #formComentarios {
+#uploadForm,
+#formComentarios {
     display: flex;
     margin: 1em 0;
     flex-direction: column;
     width: 40%;
 }
 
-#uploadForm label, #formComentarios label{
+#uploadForm label,
+#formComentarios label {
     margin-bottom: 0.4em;
 }
 
@@ -684,7 +636,7 @@ td,
     font-family: 'Raleway', sans-serif;
 }
 
-#formComentarios textarea{
+#formComentarios textarea {
     background-color: transparent;
     color: #252525;
     font-family: 'Raleway', sans-serif;
@@ -694,13 +646,13 @@ td,
     padding: 0.5em;
 }
 
-#formComentarios button{
+#formComentarios button {
     border: #252525 solid 1px;
     align-self: flex-start;
     margin: 0.5em 0;
 }
 
-#div-comentarios p{
+#div-comentarios p {
     background-color: #e96a4e65;
     border-radius: 0.4em;
     padding: 1em;
@@ -708,7 +660,7 @@ td,
     margin: 1em 0;
 }
 
-#bg-comentarios{
+#bg-comentarios {
     background-color: white;
     padding-top: 1em;
 }
