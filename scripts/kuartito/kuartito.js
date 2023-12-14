@@ -11,7 +11,7 @@ function cargarInfoShow(showId) {
             document.getElementById('show-ciudad-pais').textContent += `${show.ciudad}, ${show.pais}`;
             document.getElementById('show-asistentes').textContent += show.asistentes;
             console.log("Datos del show cargados:", show);
-        })
+            mostrarImagenes(show.images);})
         .catch(error => console.error('Error en cargarInfoShow:', error));
 }
 
